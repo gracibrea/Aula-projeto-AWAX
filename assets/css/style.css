@@ -254,7 +254,7 @@ CSS DE ÁREAS ESPECÍFICAS
 }
 
 .section-service:first-child {
-    border-left: solid 3 px #333;
+    border-left: solid 3px #333;
 }
 
 .section-service h4 {
@@ -741,16 +741,16 @@ CSS DE ÁREAS ESPECÍFICAS
     color: #999;
 }
 
-.section.light.socials {    
+.light.socials {    
     background-color: rgba(254,254,254);
-    padding: 0;
+    padding: 10px 0;
 }
 
 .section-body--socials{
     background-color: rgba(254,254,254);
     max-width: 880px;
     margin: 0 auto;
-    display: flex;
+    display: flex;    
     justify-content: center;
 }
 
@@ -785,10 +785,116 @@ CSS DE ÁREAS ESPECÍFICAS
     font-weight: 600;
 }
 
-
-.default.default.light.contactus{
+.light.contactus{
     border-top:2px solid #dadada ;
+    justify-content: center;
+    align-items: center;
 }
+
+.section-body--contactus {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form{
+    justify-content: center;
+}
+
+input#frame  {
+    background-color: inherit;
+}
+
+.name-email {
+    display: inline-flex;
+}
+
+.name,
+.email,
+.subject,
+.message {
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.name,
+.email,
+.subject,
+.message {
+    border-bottom: 2px solid #dadada;
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+}
+
+.subject {
+    margin-top: 20px;
+}
+.message {
+    margin-top: 50px;
+}
+
+.name,
+.email{
+    max-width: 240px;
+}
+
+.name{
+    margin-right: 20px;
+}
+.email{
+    margin-left: 20px;
+}
+
+
+.section-body--contactus input {
+    border: none;
+    background-color: 0;
+}
+
+a .button {
+    margin: auto;
+}
+
+.default.light.map {
+    overflow: hidden;
+    background-size: cover;
+    margin: 0;
+}
+
+.section-address {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 250px;
+    position: relative;
+    margin-top: -300px;
+    margin-left: 12px;
+    display: block;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.section-address a {
+    color: #999;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 600;    
+      
+}
+
+.section-address img{
+    background-color: #dadada;
+    padding: 5px;
+    border-radius: 20px;
+    display:inline-block;/*ajuda a ajustar o tamanho*/
+    justify-content: center;
+    align-items: center;/*ajuda a centralizar na borda*/
+    margin: 5px 10px;
+    width: 25px;
+    height: 25px;
+    
+}
+
+
 
 
 
