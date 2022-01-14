@@ -1087,9 +1087,7 @@ footer .button {
 
     .map--area-item--img {
         margin-top: 10px;
-    }
-
-    
+    }    
 
     .partners-logos{
         max-width: 480px;    
@@ -1134,11 +1132,277 @@ footer .button {
 
     .section-facts--area{    
         margin: 30px;
+    }  
+}
+
+/****************************
+  RESPONSIVIDADE MOBILE
+*****************************/
+@media screen and (max-width: 450px) {
+    .logo {
+        margin-left: 20px;
+    }
+    
+    .menu-opener {
+        display:block;
+        width: 35px;
+        margin-right: 20px;
+    }
+    
+    nav {
+        display: none;        
+        position: absolute; /* Para se posicionar acima de tudo na tela*/
+        z-index: 99; /* Specifies the stack order of an element; valor positivo coloca o elemento na frente, valor negativo coloca o elemento atrás, quanto maior o valor do elemento mais à frente dos outros ficará*/
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 60%;
+        height: calc(100vh - 100px); /* Desconta do vh a altura do header */
+        top: 100px; /* Para ficar abaixo do header */
+        right: 0;
     }
 
-    
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        height:50px;
+        margin-left: 30px;
+        border: 0;
+    }
    
+    .menu li a:hover,
+    .menu .active a {
+        border: none;      
+        color:#b28756;  
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner h2 {
+        font-size: 17px;
+    }
     
+    .section-aboutus {
+        flex-direction: column;
+    }
+
+    .section-aboutus--left {
+        margin: 20px;        
+        text-align: center;
+    }
+
+    .default.light .section-descr {
+        margin-bottom: 10px;
+    }
+
+    .section-aboutus--left p {
+        text-align: left;
+    }
+
+    .section-aboutus--left a.button {
+        margin: 10px 0 20px 0;
+    }
+
+    .section-aboutus--right {
+        width: auto;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .section-aboutus--right video {
+        width: 100%;
+    }
+
+    .default.dark .section-descr {
+        margin-bottom: 10px;
+    }
+
+    .section-services {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .section-service,
+    .section-service:first-child {
+        min-width: 100%;
+        margin: 0 10px;
+        border: none;        
+    }
+
+    .section-projets--filters {
+        max-width: 300px;
+        padding: 0 20px;  
+    }    
+
+    .section-projects--photoarea {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .section-team {
+        max-width: 280px;
+    }
+
+    .light.partners {
+        padding: 20px 0;
+    }
+
+    .partners-logos .client {
+        padding: 10px;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        margin: 0 30px;        
+    }
+
+    /* Map option 2 */
+
+    .map-address {
+        min-width: 35vw;
+        min-height: 45vh;
+        margin-left: -10px;
+        position: relative;
+    }
+
+    .map--area-item--img {
+        margin-top: 10px;
+    }  
+
+    .partners-logos{
+        max-width: 380px;    
+        display: flex;
+        flex-wrap: wrap;        
+    }
+
+    .partners-logos .client {
+        padding: 10px;
+    }
+
+    .tagarea{
+        background-color: #fff;
+        margin: 15px;
+        padding: 20px;
+        min-width: 300px;
+    }
+    
+    .features {        
+        flex-direction: column;        
+        max-width: 450px;       
+    }
+
+    .light.premium {
+        background-color: #fff;
+    }
+
+    .box {
+        max-width: 220px;
+    }
+    
+    .feature-right {
+        margin-top: 30px;
+    }
+    
+    .check img {
+        width: 20px;
+        margin: 0 5px 0 50px;       
+    }
+    
+    .featurearea {    
+        width: 370px;
+    }
+
+    .section-premium .feature-bar {
+        max-width: 480px;
+    }
+
+    .section-facts{
+        flex-wrap: wrap;        
+    }
+
+    .section-facts--area{    
+        margin: 10px;
+    }  
+
+    .section-body--socials {
+        display:grid;
+    }
+
+    .section-body--socials .text {
+       
+    }
+
+    .section-body--contactus {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .name-email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email,
+    .name,
+    .subject,
+    .message {
+        margin: 0;
+        max-width: 300px;
+        margin-top: 30px;
+    }
+    
+    .footer {    
+        max-width: 300px;        
+    }
+    
+    footer .awax {
+        font-size: 12px;
+        color: white;
+        font-weight: 600;
+        max-width: 300px;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .footer.descr {
+        padding: 20px 0;
+    }
+    
+    .footer .subscribe {
+        background-color: #333;
+        display:inline-block;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 25px;
+        color: #999;
+        font-weight: 600;    
+        text-align: center;
+    }
+    
+    .footer-email {
+        padding: 10px;
+    }
+    
+    .footer--bar {
+        border: rgb(131, 130, 130) 1px solid;
+        margin: 0 20px;
+    }
+    
+    footer .button {
+        margin: 30px 0 0;    
+    }
+    
+
 
     
 }
