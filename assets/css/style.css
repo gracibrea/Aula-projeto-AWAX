@@ -31,6 +31,12 @@ header {
     width: 100px; /*fixa a área da logo*/
 }
 
+.menu-opener { /* Responsividade */
+    display: none;
+    width: 35px;
+    margin-right: 20px;
+}
+
 .menu {
     flex: 1; /*ocupa toda a área restante do header*/
     display: flex;
@@ -75,6 +81,7 @@ header {
     font-weight: bold;
     font-size: 15px;
     border-style: none;
+    width:fit-content;
 }
 
 .banner {
@@ -461,7 +468,7 @@ CSS DE ÁREAS ESPECÍFICAS
 
 .section-clients {
     overflow: hidden;
-    max-width: 730px;
+    max-width: 580px;
     margin: 0 auto;
     text-align: center;
 }
@@ -556,7 +563,7 @@ CSS DE ÁREAS ESPECÍFICAS
     background-color: #fff;
     margin: 15px;
     padding: 20px;
-    width: 220px;
+    min-width: 220px;
 }
 
 .section-price--plan,
@@ -612,7 +619,6 @@ CSS DE ÁREAS ESPECÍFICAS
     background-color: #fff;
 }
 
-
 .features {
     display: flex;
     max-width: 880px;
@@ -665,7 +671,7 @@ CSS DE ÁREAS ESPECÍFICAS
 
 .section-premium .feature-bar {
     border-bottom: solid 2px #dadada; 
-    max-width: 880px;
+    max-width: 780px;
     margin: auto;
     padding-top: 30px;
 }
@@ -691,11 +697,6 @@ CSS DE ÁREAS ESPECÍFICAS
     background-color: #b28756;
 }
 
-.partners {        
-    border-top: solid 2px #dadada;
-    border-bottom: solid 2px #dadada;    
-}
-
 .divbutton {
     text-align: center;
 }
@@ -707,7 +708,7 @@ CSS DE ÁREAS ESPECÍFICAS
 }
 
 .section-facts--area{
-    width: 220px;
+    max-width: 220px;
     margin: 0 10px;
     padding: 20px;
     text-align: center;
@@ -843,35 +844,41 @@ input#frame  {
 
 .section-body--contactus input {
     border: none;
+    background: transparent;
 }
 
-.section-body--contactus .button {
-    margin: 0 auto;
+.section-body--contactus .button-contactus {
+    text-align: center;
 }
 
 .default.light.map {        
     overflow: hidden;
     background-size: cover; 
     height: 450px;  
-    padding: 30px 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
     /*filter: grayscale(100%) contrast(75%);   */
 }
 
 iframe {
-    filter: grayscale(100%) contrast(75%); ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%) contrast(75%);
 }
 
 .map-address {
-    background-color: rgb(255, 255, 255);    
-    width: 40%;
-    height: 245px;
-    position: relative;
-    margin-top: -470px;
-    margin-left: 10px;
-    display: block;
-    justify-content:left;
-    align-items:center;
+    position: absolute;
+    top: 29%;
+    left: 10px;
+    transform: translate(0, -50%);
+    display: inline-block;
     padding: 20px 30px;
+    background-color: rgb(255, 255, 255);
+
 }
 
 .map-address a {
@@ -944,10 +951,10 @@ footer {
 footer .awax {
     font-size: 12px;
     color: white;
-    position: relative;
-    left: -200px;
-    bottom: -90px;
     font-weight: 600;
+    max-width: 880px;
+    margin: auto;
+    padding: 0 0 10px 20px;
 }
 
 .footer.descr {
@@ -962,23 +969,176 @@ footer .awax {
     display:inline-block;
     text-transform: uppercase;
     font-size: 13px;
-    padding: 20px;
+    padding: 25px;
     color: #999;
     font-weight: 600;    
+    text-align: center;
 }
 
-footer .email {
-    position: relative;
-    left: 11%; 
+.footer-email {
+    padding: 10px;
 }
 
 .footer--bar {
-    border: #555 2px solid;
+    border: rgb(131, 130, 130) 1px solid;
     margin: 0 20px;
 }
 
 footer .button {
-    margin: 20px;
-    position: relative;
-    left: 13%;
+    margin: 30px 0 0;    
+}
+/****************************
+  RESPONSIVIDADE IPAD/TABLET
+*****************************/
+@media screen and (min-width: 450px) and (max-width: 800px) {
+    .logo {
+        margin-left: 20px;
+    }
+    
+    .menu-opener {
+        display:block;
+        width: 35px;
+        margin-right: 20px;
+    }
+    
+    nav {
+        display: none;
+        position: absolute; /* Para se posicionar acima de tudo na tela*/
+        z-index: 99; /* Specifies the stack order of an element; valor positivo coloca o elemento na frente, valor negativo coloca o elemento atrás, quanto maior o valor do elemento mais à frente dos outros ficará*/
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70%;
+        height: calc(100vh - 100px); /* Desconta do vh a altura do header */
+        top: 100px; /* Para ficar abaixo do header */
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        height:60px;
+        margin-left: 30px;
+        border: 0;
+    }
+   
+    .menu li a:hover,
+    .menu .active a {
+        border: none;      
+        color:#b28756;  
+    }
+    
+    .section-aboutus {
+        flex-direction: column;
+    }
+
+    .section-aboutus--left {
+        margin: 20px;
+    }
+
+    .section-aboutus--right {
+        width: auto;
+        margin: auto;
+    }
+
+    .section-services {
+        flex-wrap: wrap;
+    }
+
+    .section-service {
+        min-width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .section-service:first-child{
+        border-left: 0;
+    }
+
+    .section-service:last-child {
+        border-right: 0;
+    }
+
+    .section-service:nth-child(2) {
+        border-right: 0;
+    }
+
+    .section-team {
+        max-width: 580px;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        margin: 0 30px;        
+    }
+
+    /* Map option 1 */
+
+    .map-address {
+        min-width: 35vw;
+        min-height: 15vh;
+        margin-left: 80px;
+    }
+
+    .map--area-item--img {
+        margin-top: 10px;
+    }
+
+    
+
+    .partners-logos{
+        max-width: 480px;    
+        display: flex;
+        flex-wrap: wrap;        
+    }
+
+    .partners-logos .client {
+        padding: 15px;
+    }
+    
+    .features {        
+        flex-direction: column;        
+        max-width: 450px;       
+    }
+
+    .box {
+        max-width: 220px;
+        margin: auto;
+    }
+    
+    .feature-right {
+        margin-top: 30px;
+    }
+    
+    .check img {
+        width: 20px;
+        margin: 0 5px 0 50px;       
+    }
+    
+    .featurearea {    
+        width: 370px;
+    }
+
+    .section-premium .feature-bar {
+        max-width: 480px;
+    }
+
+    .section-facts{
+        flex-wrap: wrap;        
+    }
+
+    .section-facts--area{    
+        margin: 30px;
+    }
+
+    
+   
+    
+
+    
 }
