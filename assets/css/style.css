@@ -750,27 +750,29 @@ CSS DE ÁREAS ESPECÍFICAS
     display: flex;    
     justify-content: center;
 }
+.section-body--socials-icon,
+.section-body--socials-tell {
+    display: inline-flex;/*ajuda a ajustar o tamanho*/
+    justify-content: center;/*ajuda a centralizar na borda*/
+    align-items: center;/*ajuda a centralizar na borda*/
+}
 
 .section-body--socials a img{
     display: inline-flex;/*ajuda a ajustar o tamanho*/
     justify-content: center;/*ajuda a centralizar na borda*/
     align-items: center;/*ajuda a centralizar na borda*/
-    margin: 5px;
+    margin: 20px;
     width: 35px;
     height: 35px;
-}
-.section-body--socials a img[href*=facebook]{
-    width: 40px;
-    height: 40px;
 }
 
 .text,
 .text-n{
     color: #adadad;
-    display: inline-flex;/*ajuda a ajustar o tamanho*/
-    align-items: center;/*ajuda a centralizar na borda*/
+    display: block;/*ajuda a ajustar o tamanho*/
     width: fit-content;
-    margin-right: 12px;
+    align-items: center;
+    margin-right: 0px;
     font-weight: 600;
 }
 .text-n {
@@ -1334,10 +1336,28 @@ footer .button {
         margin: 10px;
     }  
 
-    .section-body--socials {
-        display:grid;
+    .section-body--socials-icon {
+        display:block; 
+    }
+    .section-body--socials-tell a {
+        display: none;
     }
 
+    .section-body--socials-tell .text {
+        font-size: 12px;
+    }
+
+    .section-body--socials a img{
+        display: inline-block;
+        margin: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .text,
+    .text-n{
+        font-size: 8px;
+        margin: 0 auto;
+    }
 
     .section-body--contactus {
         max-width: 300px;
